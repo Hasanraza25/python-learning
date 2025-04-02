@@ -20,7 +20,6 @@ print(duplicate_set)  # Output: {1, 2, 3, 4, 5} (duplicates are removed)
 my_set = {1, 2, (3, 4)} # ✅ Since tuples are immutable, they can be inside a set.
 print(my_set)  
 
-
 # my_set.add(4)
 # print(my_set)
 
@@ -32,9 +31,11 @@ numbers = {10, 20, 30, 40, 50}
 numbers.add(60)
 numbers.remove(10)
 # numbers.remove(100) # error occurs bcz 100 not exists
-numbers.discard(110) # No error, but nothing happens
-numbers.update([70, 80, 90] )
-print(numbers)
+numbers.discard(110) # discard also removes the element but doesn't throw an error if not found
+numbers.update([70, 80, 90]) # add multiple elements at once by list or set
+numbers.pop() # removes a random element from the set
+numbers.clear() # removes all elements from the set
+print("Set Basic Operation:",numbers)
 
 # Removing Duplicates Using a Set
 numbers = [1, 2, 3, 4, 2, 3, 5, 6, 5, 7, 8, 8]
