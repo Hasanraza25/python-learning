@@ -2,6 +2,7 @@
 # A dictionary is a collection which is unordered, changeable and indexed.
 # In Python, dictionaries are written with curly brackets, and they have keys and values.
 
+marks = {} # empty dictionary
 marks = {
     "ALice": 90,
     "Bob": 80,
@@ -11,10 +12,9 @@ marks = {
     0: "HArry",
 }
 
-marks = {} # empty dictionary
 
 # Accessing Items
-# print(marks["list"])
+print(marks["list"]) 
 # print(marks["ALice1"]) # If not found, it will throw an error
 # print(marks.get("ALice1")) # If not found, it will return None
 # print(marks.get("Bob"))
@@ -44,7 +44,7 @@ marks = {
     "David": 60,
 }
 marks.update({"Hasan": 50})
-print(marks.get("John", 50))
+print("John marks",marks.get("John", 50)) # This won't add John to the dictionary
 
 # Create a dictionary with information about a book (title, author, year, and genre).
 book = {
@@ -65,13 +65,14 @@ print(student)
 
 employee = {"name": "John", "salary": 5000, "position": "Manager", "department": "HR"}
 # Remove the "salary" key using pop() and store its value.
-employee.pop("salary")
-employee.popitem()
-print(employee)
+employee.pop("salary") # pop() removes the key-value pair and returns the value
+employee.popitem() # popitem() removes the last inserted key-value pair
+print("EMployee",employee)
 
 user_profile = {"username": "jdoe", "email": "jdoe@example.com"}
-user_profile.setdefault("age", 30)
-print(user_profile)
+user_profile.setdefault("age", 30) # setdefault() adds the key-value pair if the key does not exist
+user_profile.setdefault("username", "Hasan") # setdefault() does not add the key-value pair if the key already exists
+print("User Profile",user_profile)
 print(user_profile.setdefault("age"))
 
 # Use fromkeys() to create a dictionary with keys ["name", "age", "gender"] and set all values to "Unknown".
